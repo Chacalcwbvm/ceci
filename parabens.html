@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabéns!</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffccff;
+      color: #ff66b3;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: bounce 1s infinite;
+    }
+
+    #closeButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      background-color: #ff66b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+      animation: fadeIn 1s;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .heart {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: url('heart.png') no-repeat center center;
+      background-size: cover;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Mandou bem hein!!! 🎉✨</h1>
+  <p>Você desvendou o mistério!</p>
+  <button id="closeButton">Fechar</button>
+
+  <script>
+    // Exibir o botão após 3 segundos
+     {
+      document.getElementById('closeButton').style.display = 'block';
+    },0);
+
+    // Ao clicar no botão, redirecionar para a página de desculpas
+    document.getElementById('closeButton').onclick = function() {
+      window.location.href = 'desculpas.html'; // Redireciona para a nova página de desculpas
+    };
+  </script>
+</body>
+</html>
